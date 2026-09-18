@@ -1,0 +1,217 @@
+/* 
+  PEMILU DIGITAL NUSANTARA - ELEGANT DARK CHARCOAL BLACK THEME
+  Theme: Sleek Jet Black & Warm Metallic Gold (Non-glaring, Comfort Eyes)
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap');
+
+:root {
+  --bg-black: #0B0E14;
+  --bg-card: #121722;
+  --bg-card-hover: #1A2232;
+  --gold-primary: #D4AF37;
+  --gold-warm: #E5B842;
+  --gold-soft: #F3E5AB;
+  --gold-dark: #8C6D1F;
+  --gold-gradient: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 50%, #997A15 100%);
+  --crimson-soft: #E11D48;
+  --cyan-soft: #38BDF8;
+  --emerald-soft: #10B981;
+  --text-main: #F1F5F9;
+  --text-muted: #94A3B8;
+  --border-gold: rgba(212, 175, 55, 0.3);
+  --border-dark: rgba(255, 255, 255, 0.08);
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg-black);
+  color: var(--text-main);
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(circle at 15% 20%, rgba(212, 175, 55, 0.06) 0%, transparent 45%),
+    radial-gradient(circle at 85% 80%, rgba(225, 29, 72, 0.05) 0%, transparent 45%),
+    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0 L60 30 L30 60 L0 30 Z' fill='none' stroke='rgba(212,175,55,0.03)' stroke-width='1'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+}
+
+h1, h2, h3, .font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-code {
+  font-family: 'Fira Code', monospace;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #080A0E;
+}
+::-webkit-scrollbar-thumb {
+  background: #2A364F;
+  border-radius: 5px;
+  border: 2px solid #080A0E;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-primary);
+}
+
+/* Sleek Dark Glassmorphism Cards */
+.glass-panel {
+  background: rgba(18, 23, 34, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-dark);
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.6);
+}
+
+.glass-panel-gold {
+  background: rgba(22, 27, 40, 0.92);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--border-gold);
+  box-shadow: 0 12px 35px rgba(212, 175, 55, 0.12);
+}
+
+.glass-panel-red {
+  background: rgba(28, 16, 24, 0.92);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(225, 29, 72, 0.3);
+  box-shadow: 0 12px 35px rgba(225, 29, 72, 0.12);
+}
+
+/* Warm Metallic Gold Typography (Non-glaring) */
+.text-gold-gradient {
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-glow {
+  text-shadow: 0 0 15px rgba(212, 175, 55, 0.35);
+}
+
+/* Animations */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes pulseGlowGaruda {
+  0%, 100% { 
+    filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.4));
+  }
+  50% { 
+    filter: drop-shadow(0 0 35px rgba(212, 175, 55, 0.7));
+  }
+}
+
+.animate-float {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+.garuda-pulse {
+  animation: pulseGlowGaruda 4s ease-in-out infinite;
+}
+
+/* Buttons */
+.btn-gold {
+  background: var(--gold-gradient);
+  color: #0B0E14;
+  font-weight: 800;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.25);
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
+  filter: brightness(1.1);
+}
+
+.btn-red {
+  background: linear-gradient(135deg, #E11D48 0%, #9F1239 100%);
+  color: #FFFFFF;
+  font-weight: 800;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(225, 29, 72, 0.3);
+}
+
+.btn-red:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(225, 29, 72, 0.5);
+}
+
+.btn-outline-gold {
+  border: 1px solid var(--gold-primary);
+  color: var(--gold-soft);
+  background: rgba(212, 175, 55, 0.05);
+  transition: all 0.3s ease;
+}
+
+.btn-outline-gold:hover {
+  background: rgba(212, 175, 55, 0.18);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+  color: #FFFFFF;
+}
+
+/* Stamps & Watermarks */
+.stamp-confidential {
+  border: 2px double var(--crimson-soft);
+  color: var(--crimson-soft);
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+  padding: 4px 12px;
+  border-radius: 4px;
+  transform: rotate(-5deg);
+  display: inline-block;
+  background: rgba(225, 29, 72, 0.1);
+}
+
+.watermark-confidential {
+  position: relative;
+  overflow: hidden;
+}
+
+.watermark-confidential::before {
+  content: "RAHASIA STATE SECRET";
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-25deg);
+  font-family: 'Cinzel', serif;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: rgba(225, 29, 72, 0.05);
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* PRD Tab Active */
+.prd-tab-active {
+  background: rgba(212, 175, 55, 0.15) !important;
+  border-bottom: 3px solid var(--gold-primary) !important;
+  color: var(--gold-soft) !important;
+}
+
+/* Candidate Card */
+.candidate-card {
+  transition: all 0.3s ease;
+}
+
+.candidate-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7), 0 0 20px rgba(212, 175, 55, 0.2);
+}
+
+/* Terminal Window */
+.terminal-window {
+  background: #07090D;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
