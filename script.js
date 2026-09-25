@@ -1,6 +1,6 @@
 /**
  * PEMILU DIGITAL NUSANTARA - VIBE CODING LOGIC ENGINE
- * End-to-End Cryptographic Verifiable E-Voting & Audit Explorer 
+ * End-to-End Cryptographic Verifiable E-Voting & Audit Explorer */
 document.addEventListener('DOMContentLoaded', () => {
   initPrdTabs();
   initProblemSolvingAccordion();
